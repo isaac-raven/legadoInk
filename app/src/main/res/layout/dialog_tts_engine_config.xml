@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="ifContentScrolls"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <io.legado.app.ui.widget.text.TextInputLayout
+            android:id="@+id/til_base_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="服务地址(如 http://192.168.1.10:8000/v1)"
+            tools:ignore="HardcodedText">
+
+            <io.legado.app.ui.widget.text.AutoCompleteTextView
+                android:id="@+id/et_base_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </io.legado.app.ui.widget.text.TextInputLayout>
+
+        <io.legado.app.ui.widget.text.TextInputLayout
+            android:id="@+id/til_api_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="API Key"
+            tools:ignore="HardcodedText">
+
+            <io.legado.app.ui.widget.text.AutoCompleteTextView
+                android:id="@+id/et_api_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </io.legado.app.ui.widget.text.TextInputLayout>
+
+        <io.legado.app.ui.widget.text.TextInputLayout
+            android:id="@+id/til_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="模型(如 qwen3-tts-flash)"
+            tools:ignore="HardcodedText">
+
+            <io.legado.app.ui.widget.text.AutoCompleteTextView
+                android:id="@+id/et_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </io.legado.app.ui.widget.text.TextInputLayout>
+
+        <io.legado.app.ui.widget.text.TextInputLayout
+            android:id="@+id/til_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="音色"
+            tools:ignore="HardcodedText">
+
+            <io.legado.app.ui.widget.text.AutoCompleteTextView
+                android:id="@+id/et_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </io.legado.app.ui.widget.text.TextInputLayout>
+
+        <io.legado.app.ui.widget.text.TextInputLayout
+            android:id="@+id/til_voice_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="英文声音(中英混读时朗读英文片段)"
+            tools:ignore="HardcodedText">
+
+            <io.legado.app.ui.widget.text.AutoCompleteTextView
+                android:id="@+id/et_voice_en"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </io.legado.app.ui.widget.text.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_read_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <io.legado.app.lib.theme.view.ThemeRadioButton
+                android:id="@+id/rb_mode_zh_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="中文音色读中英文"
+                tools:ignore="HardcodedText" />
+
+            <io.legado.app.lib.theme.view.ThemeRadioButton
+                android:id="@+id/rb_mode_split"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="中英文分别用各自音色(更自然)"
+                tools:ignore="HardcodedText" />
+
+            <io.legado.app.lib.theme.view.ThemeRadioButton
+                android:id="@+id/rb_mode_en_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="英文音色读中英文"
+                tools:ignore="HardcodedText" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

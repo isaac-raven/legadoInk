@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ 系统开屏: 指定开屏背景色, 避免部分ROM用黑色兜底导致启动闪黑 -->
+    <style name="AppTheme.Welcome" parent="Base.AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/welcome_bg</item>
+        <item name="android:windowSplashScreenBackground">@color/welcome_bg</item>
+    </style>
+</resources>
