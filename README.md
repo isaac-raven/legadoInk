@@ -10,6 +10,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Android%2021%2B-brightgreen.svg)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.3.10-purple.svg)](https://kotlinlang.org)
 
+**简体中文** | [English](README_EN.md)
+
 </div>
 
 ---
